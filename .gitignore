@@ -1,0 +1,25 @@
+cd ~/heart-scrna-analysis
+cat > .gitignore << 'EOF'
+# Data files (too large for GitHub)
+*.h5ad
+*.h5
+data/raw/
+data/processed/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Mac
+.DS_Store
+
+# Large output files
+*.pdf
+*.png
+figures/*.pdf
+EOF
