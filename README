@@ -1,0 +1,38 @@
+cat > README.md << 'EOF'
+# Single-Cell RNA-seq Analysis: Human Heart Atlas
+
+Analysis of human heart single-cell RNA-seq data from Wang et al. and Human Cell Atlas.
+
+## Overview
+Integration and analysis of:
+- Wang et al. left ventricle healthy samples
+- HCA heart septum data
+
+## Notebooks
+
+1. **01_data_integration_harmony.ipynb**: Primary integration pipeline using Harmony
+   - QC and filtering
+   - Harmony batch correction
+   - Clustering and UMAP visualization
+
+2. **02_integration_methods_comparison.ipynb**: Comparison of BBKNN and scVI methods
+   - Alternative integration approaches
+   - Method benchmarking
+
+## Requirements
+```bash
+conda create -n scrna python=3.10
+conda activate scrna
+pip install scanpy scvi-tools bbknn harmonypy decoupler pertpy
+```
+
+## Data
+Raw .h5ad files are not included due to size. Download from:
+- Wang et al.: [link]
+- HCA: [link]
+
+## Usage
+```bash
+jupyter notebook notebooks/01_data_integration_harmony.ipynb
+```
+EOF
