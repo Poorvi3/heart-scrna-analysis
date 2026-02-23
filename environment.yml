@@ -1,0 +1,19 @@
+cat > environment.yml << 'EOF'
+name: scrna-heart
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - jupyter
+  - pip:
+    - scanpy
+    - scvi-tools
+    - bbknn
+    - harmonypy
+    - decoupler
+    - pertpy
+    - scrublet
+EOF
